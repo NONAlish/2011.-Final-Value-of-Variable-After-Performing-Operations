@@ -1,0 +1,16 @@
+/**
+ * @param {string[]} operations
+ * @return {number}
+ */
+var finalValueAfterOperations = function(operations) {
+    let count = 0;
+    for (let oper of operations) {
+        if (oper === '--X' || oper === 'X--'){
+            count--;
+        }
+        if (oper === '++X' || oper === 'X++') {
+            count++;
+        }
+    }
+    return count;
+};
